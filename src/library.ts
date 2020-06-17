@@ -1,6 +1,19 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-  // import "core-js/fn/array.find"
-  // ...
-export default class DummyClass {
+import Emitter from 'events'
+
+export default class koa extends (Emitter as any) {
+  public fn: any;
+  constructor() {
+    super();
+    // this.fn;
+  }
+
+  use(fn:Function):void {
+    this.fn = fn
+  }
+
+  listen() {
+
+  }
+
 
 }
